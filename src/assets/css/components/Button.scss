@@ -1,0 +1,29 @@
+.Button {
+  &-control {
+    outline: none;
+    cursor: pointer;
+    border: 1px solid;
+    background: $background-default;
+    border-color: $border-color-default;
+    transition: $common-transition;
+    border-radius: $common-radius;
+
+    &-title {
+      transition: $common-transition;
+      color: $text-color-default;
+    }
+  }
+
+  &.middle {
+    .Button {
+      &-control {
+        min-height: 40px;
+        padding: 8px 16px;
+
+        &-title {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
