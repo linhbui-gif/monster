@@ -1,0 +1,25 @@
+.Input {
+  &-control {
+    outline: none;
+    border: 1px solid;
+    background: $background-default;
+    border-color: $border-color-default;
+    transition: $common-transition;
+    border-radius: $common-radius;
+    color: $text-color-default;
+
+    &::placeholder {
+      color: $placeholder-color-default;
+    }
+  }
+
+  &.middle {
+    .Input {
+      &-control {
+        min-height: 40px;
+        padding: 8px 16px;
+        font-size: 16px;
+      }
+    }
+  }
+}

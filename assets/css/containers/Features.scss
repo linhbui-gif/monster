@@ -1,0 +1,63 @@
+.Features {
+  margin-bottom: 66rem;
+
+  &-main {
+    &-item {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 4rem;
+
+      @media (max-width: 991px) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 30px 0;
+      }
+
+      &-image {
+        width: 100%;
+        max-width: 28rem;
+        margin: 0 auto 4rem;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &-title {
+        font-size: 3.2rem;
+        font-family: Glue-Gun;
+        letter-spacing: 0.2rem;
+        margin-bottom: 3rem;
+        text-align: center;
+        color: $white;
+      }
+
+      &-description {
+        font-size: 2.2rem;
+        text-align: center;
+        color: $white;
+        margin-bottom: 3rem;
+        font-family: HKGrotesk-Bold;
+      }
+
+      &-see-more {
+        cursor: pointer;
+        width: fit-content;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        padding: 8px 20px;
+        border: 1px solid $white;
+        transition: 0.3s ease;
+        font-size: 2.2rem;
+        color: $white;
+        border-radius: 40px;
+
+        &:hover {
+          background: $white;
+          color: $primary;
+        }
+      }
+    }
+  }
+}

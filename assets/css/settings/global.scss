@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:  HKGrotesk-Regular;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 10px;
+
+  @media (max-width: 1440px) {
+    font-size: 8px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 7px;
+  }
+}
+
+.container {
+  max-width: 1380px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media (max-width: 1440px) {
+    max-width: 1200px;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+section.section {
+  padding: 6rem 0;
+
+  .section-header {
+    margin-bottom: 9.5rem;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 4.8rem;
+    color: $gray;
+    font-family: Glue-Gun;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  .section-description {
+    text-align: center;
+    font-size: 2.4rem;
+    font-family: HKGrotesk-Medium;
+    max-width: 88rem;
+    margin: 4rem auto 0;
+  }
+}
+
+.background-page {
+  background: url('../images/bg-desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (max-width: 768px) {
+    background: url('../images/bg-mobile.png');
+  }
+}

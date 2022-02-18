@@ -1,0 +1,39 @@
+.Header {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+
+  &-wrapper {
+    padding: 16px 0;
+  }
+
+  &-logo {
+    max-width: 23.4rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  &-nav {
+    &-link {
+      color: $white;
+      font-size: 2.4rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-family: Glue-Gun;
+      letter-spacing: 0.2rem;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: $black;
+
+      &:not(:first-of-type) {
+        margin-left: 6.4rem;
+      }
+    }
+  }
+}
