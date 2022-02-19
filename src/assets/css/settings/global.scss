@@ -118,5 +118,8 @@ section.section {
 
   @media (max-width: 768px) {
     background: url('../images/bg-mobile.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }

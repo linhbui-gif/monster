@@ -1031,7 +1031,10 @@ section.section {
   background-repeat: no-repeat; }
   @media (max-width: 768px) {
     .background-page {
-      background: url("../images/bg-mobile.png"); } }
+      background: url("../images/bg-mobile.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; } }
 
 .Header {
   position: absolute;
@@ -1077,7 +1080,8 @@ section.section {
         font-size: 30px; } }
     .Footer-description a {
       color: #fff;
-      text-decoration: none; }
+      text-decoration: none;
+      word-break: break-all; }
   .Footer-wrapper {
     padding: 7.5rem 0; }
     @media (max-width: 991px) {
@@ -1448,7 +1452,13 @@ section.section {
           text-align: center; } }
 
 .Features {
-  margin-bottom: 66rem; }
+  margin-bottom: 120rem; }
+  @media (max-width: 1440px) {
+    .Features {
+      margin-bottom: 140rem; } }
+  @media (max-width: 768px) {
+    .Features {
+      margin-bottom: 90rem; } }
   .Features-main-item {
     flex: 0 0 50%;
     max-width: 50%;

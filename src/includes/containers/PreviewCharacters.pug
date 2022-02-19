@@ -6,41 +6,43 @@
 
     .PreviewCharacters-preview 
       .owl-carousel#preview-character-carousel
-        each item in [1,2,3,4]
-          .item
-            .PreviewCharacters-preview-image 
-              img(src="./assets/images/image-character-1.png", alt="")
+        //- each item in [1,2,3,4]
+        //-   .item
+        //-     .PreviewCharacters-preview-image 
+        //-       img(src="./assets/images/image-character-1.png", alt="")
 
-      .PreviewCharacters-button.left
-        img(src="./assets/icons/icon-arrow-left.svg", alt="")
-      .PreviewCharacters-button.right
-        img(src="./assets/icons/icon-arrow-right.svg", alt="")
+      .PreviewCharacters-character-main-button
+        //- .PreviewCharacters-button.left
+        //-   img(src="./assets/icons/icon-arrow-left.svg", alt="")
+        //- .PreviewCharacters-button.right
+        //-   img(src="./assets/icons/icon-arrow-right.svg", alt="")
 
     .PreviewCharacters-navigation.flex.items-center.justify-between 
-      .PreviewCharacters-navigation-arrow 
+      .PreviewCharacters-navigation-arrow.left
         img(src="./assets/icons/icon-arrow-effect-left.svg", alt="")
 
       .PreviewCharacters-navigation-title Advanced
 
-      .PreviewCharacters-navigation-arrow 
+      .PreviewCharacters-navigation-arrow.right
         img(src="./assets/icons/icon-arrow-effect-right.svg", alt="")
 
   .PreviewCharacters-level
     .PreviewCharacters-level-main
       .owl-carousel#preview-level-carousel
-        each item in [1,2,3,4]
-          .item
-            .PreviewCharacters-level-preview-item.flex.items-center 
-              .PreviewCharacters-level-preview-item-image.flex.items-center
-                img(src="./assets/images/image-character-1.png", alt="")
+        //- each item in [1,2,3,4]
+        //-   .item
+        //-     .PreviewCharacters-level-preview-item.flex.items-center 
+        //-       .PreviewCharacters-level-preview-item-image.flex.items-center
+        //-         img(src="./assets/images/image-character-1.png", alt="")
 
-              .PreviewCharacters-level-preview-item-info
-                .PreviewCharacters-level-preview-item-info-title.flex.items-center 
-                  .PreviewCharacters-level-preview-item-info-title-number= item
-                  .PreviewCharacters-level-preview-item-info-title-label LightBlue
-                .PreviewCharacters-level-preview-item-info-description A Crazy Defense Heroes Bronze Chest contains 3 TOWER Game Card NFT’s ranging in rarity from Common to Epic.
+        //-       .PreviewCharacters-level-preview-item-info
+        //-         .PreviewCharacters-level-preview-item-info-title.flex.items-center 
+        //-           .PreviewCharacters-level-preview-item-info-title-number= item
+        //-           .PreviewCharacters-level-preview-item-info-title-label LightBlue
+        //-         .PreviewCharacters-level-preview-item-info-description A Crazy Defense Heroes Bronze Chest contains 3 TOWER Game Card NFT’s ranging in rarity from Common to Epic.
 
-      .PreviewCharacters-level-button.left
-        img(src="./assets/icons/icon-angle-left.svg", alt="")
-      .PreviewCharacters-level-button.right
-        img(src="./assets/icons/icon-angle-right.svg", alt="")
+      .PreviewCharacters-level-main-button
+        //- .PreviewCharacters-level-button.left
+        //-   img(src="./assets/icons/icon-angle-left.svg", alt="")
+        //- .PreviewCharacters-level-button.right
+        //-   img(src="./assets/icons/icon-angle-right.svg", alt="")
