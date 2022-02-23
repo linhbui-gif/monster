@@ -40,11 +40,14 @@ const owlCarousel = {
       const mainPreviewCharacterButton = document.querySelector('.PreviewCharacters-character-main-button')
       const mainPreviewLevelButton = document.querySelector('.PreviewCharacters-level-main-button')
 
+      const mainPreviewNameCharacter = document.querySelector('.PreviewCharacters-navigation-title');
 
       mainPreviewCharacter.innerHTML = ''
       mainPreviewLevel.innerHTML = ''
       mainPreviewCharacterButton.innerHTML = ''
       mainPreviewLevelButton.innerHTML = ''
+      mainPreviewNameCharacter.innerHTML = ''
+
       let contentPreviewCharacter = ''
       let contentPreviewLevel = ''
 
@@ -96,6 +99,7 @@ const owlCarousel = {
 
       mainPreviewCharacter.innerHTML = contentPreviewCharacter
       mainPreviewLevel.innerHTML = contentPreviewLevel
+      mainPreviewNameCharacter.innerHTML = currentData.name
 
       const $owlPreviewCharacter = $("#preview-character-carousel")
       $owlPreviewCharacter.trigger('destroy.owl.carousel');

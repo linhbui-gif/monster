@@ -10,7 +10,7 @@ header.Header
   .container 
     .Header-wrapper.flex.items-center.justify-between 
       .Header-logo 
-        img(src="./assets/images/logo.svg", alt="")
+        img(src="./assets/images/logo.png", alt="")
       .Header-nav.flex.items-center 
         each item in dataMenuLink
           a(href=`${item.link}` target=`${item.newTab ? '_blank' : ''}`).Header-nav-link= item.title

@@ -1338,7 +1338,8 @@ section.section {
         font-size: 6.2rem;
         color: #fff;
         overflow: hidden;
-        text-overflow: ellipsis; }
+        text-overflow: ellipsis;
+        white-space: nowrap; }
         @media (max-width: 768px) {
           .PreviewCharacters-level-preview-item-info-title-label {
             font-size: 18px; } }

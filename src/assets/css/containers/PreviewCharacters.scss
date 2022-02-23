@@ -300,6 +300,7 @@
             color: $white;
             overflow: hidden;
             text-overflow: ellipsis;
+            white-space: nowrap;
 
             @media (max-width: 768px) {
               font-size: 18px;
