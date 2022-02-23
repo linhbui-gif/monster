@@ -28,7 +28,7 @@ const owlCarousel = {
     this.previewCharacterCarousel()
   },
   previewCharacterCarousel: async function () {
-    const response = await fetch('../../data.json');
+    const response = await fetch('https://daonghia2404.github.io/crypto-monster/data.json');
     const data = await response.json();
     let currentIndex = 0;
 
