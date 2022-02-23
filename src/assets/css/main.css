@@ -1158,7 +1158,11 @@ section.section {
   .PreviewCharacters-preview-image {
     width: 100%;
     max-width: 34rem;
+    min-height: 380px;
     margin: auto; }
+    @media (max-width: 768px) {
+      .PreviewCharacters-preview-image {
+        min-height: 335px; } }
 
 .PreviewCharacters-button {
   cursor: pointer;
