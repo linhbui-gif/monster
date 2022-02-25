@@ -1,12 +1,16 @@
 .Features {
-  margin-bottom: 120rem;
+  margin-bottom: 60rem;
+
+  @media (min-width: 769px) {
+    padding-top: 0 !important;
+  }
 
   @media (max-width: 1440px) {
-    margin-bottom: 140rem;
+    margin-bottom: 44rem;
   }
 
   @media (max-width: 768px) {
-    margin-bottom: 90rem;
+    margin-bottom: 38rem;
   }
 
   &-main {

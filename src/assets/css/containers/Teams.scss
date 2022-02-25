@@ -1,0 +1,50 @@
+.Teams {
+  &-main {
+    margin-top: 9rem;
+    gap: 6.5rem;
+
+    @media (max-width: 768px) {
+      gap: 45px;
+      justify-content: space-between;
+    }
+
+    &-item {
+      flex: 0 0 22rem;
+      max-width: 22rem;
+
+      @media (max-width: 768px) {
+        flex: 0 0 calc(50% - 45px);
+        max-width: calc(50% - 45px);
+      }
+
+      @media (max-width: 575px) {
+        flex: 0 0 42%;
+        max-width: 42%;
+      }
+
+      &-image {
+        margin-bottom: 3rem;
+        img {
+          width: 100%;
+        }
+      }
+
+      &-name,
+      &-des {
+        text-align: center;
+        color: $white;
+      }
+
+      &-name {
+        font-size: 3rem;
+        font-family: 'Glue-Gun';
+        text-transform: uppercase;
+      }
+
+      &-des {
+        font-size: 2rem;
+        font-family: HKGrotesk-Bold;
+      }
+    }
+  }
+}

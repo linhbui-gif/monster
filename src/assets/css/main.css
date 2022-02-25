@@ -1028,13 +1028,15 @@ section.section {
   background: url("../images/bg-desktop.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  min-height: 696.6rem; }
   @media (max-width: 768px) {
     .background-page {
       background: url("../images/bg-mobile.png");
       background-size: cover;
       background-position: center;
-      background-repeat: no-repeat; } }
+      background-repeat: no-repeat;
+      min-height: 69.3rem; } }
 
 .Header {
   position: absolute;
@@ -1421,6 +1423,9 @@ section.section {
 
 .GamePlay {
   overflow: hidden; }
+  @media (min-width: 769px) {
+    .GamePlay {
+      padding-bottom: 0 !important; } }
   .GamePlay-main-item {
     flex: 0 0 50%;
     max-width: 50%; }
@@ -1441,7 +1446,8 @@ section.section {
       margin: 0 auto; }
       @media (max-width: 991px) {
         .GamePlay-main-item-image {
-          transform: translateX(8%); } }
+          transform: translateX(8%);
+          max-width: 100%; } }
     .GamePlay-main-item-title {
       font-size: 3.6rem;
       margin-bottom: 2.4rem;
@@ -1457,13 +1463,16 @@ section.section {
           text-align: center; } }
 
 .Features {
-  margin-bottom: 120rem; }
+  margin-bottom: 60rem; }
+  @media (min-width: 769px) {
+    .Features {
+      padding-top: 0 !important; } }
   @media (max-width: 1440px) {
     .Features {
-      margin-bottom: 140rem; } }
+      margin-bottom: 44rem; } }
   @media (max-width: 768px) {
     .Features {
-      margin-bottom: 90rem; } }
+      margin-bottom: 38rem; } }
   .Features-main-item {
     flex: 0 0 50%;
     max-width: 50%;
@@ -1507,3 +1516,45 @@ section.section {
       .Features-main-item-see-more:hover {
         background: #fff;
         color: #305D00; }
+
+.Tokenomic-main {
+  margin-top: 13rem; }
+  .Tokenomic-main-image {
+    max-width: 104.7rem;
+    margin: 0 auto;
+    text-align: center; }
+    .Tokenomic-main-image img {
+      width: 100%; }
+
+.Teams-main {
+  margin-top: 9rem;
+  gap: 6.5rem; }
+  @media (max-width: 768px) {
+    .Teams-main {
+      gap: 45px;
+      justify-content: space-between; } }
+  .Teams-main-item {
+    flex: 0 0 22rem;
+    max-width: 22rem; }
+    @media (max-width: 768px) {
+      .Teams-main-item {
+        flex: 0 0 calc(50% - 45px);
+        max-width: calc(50% - 45px); } }
+    @media (max-width: 575px) {
+      .Teams-main-item {
+        flex: 0 0 42%;
+        max-width: 42%; } }
+    .Teams-main-item-image {
+      margin-bottom: 3rem; }
+      .Teams-main-item-image img {
+        width: 100%; }
+    .Teams-main-item-name, .Teams-main-item-des {
+      text-align: center;
+      color: #fff; }
+    .Teams-main-item-name {
+      font-size: 3rem;
+      font-family: 'Glue-Gun';
+      text-transform: uppercase; }
+    .Teams-main-item-des {
+      font-size: 2rem;
+      font-family: HKGrotesk-Bold; }

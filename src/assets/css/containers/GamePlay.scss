@@ -1,5 +1,9 @@
 .GamePlay {
   overflow: hidden;
+  @media (min-width: 769px) {
+    padding-bottom: 0 !important;
+  }
+
   &-main {
     &-item {
       flex: 0 0 50%;
@@ -27,6 +31,7 @@
         margin: 0 auto;
         @media (max-width: 991px) {
           transform: translateX(8%);
+          max-width: 100%;
         }
       }
 
