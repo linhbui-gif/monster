@@ -30,14 +30,17 @@
     <header class="Header">
       <div class="container"> 
         <div class="Header-wrapper flex items-center justify-between"> 
+          <div class="Header-overlay"></div>
           <div class="Header-logo"> <img src="./assets/images/logo.png" alt=""></div>
-          <div class="Header-nav flex items-center"> <a class="Header-nav-link" href="#marketplace" target="">Marketplace</a><a class="Header-nav-link" href="#staking" target="">Staking</a><a class="Header-nav-link" href="#whitepaper" target="">Whitepaper</a><a class="Header-nav-link" href="https://demo.cryptomonter.com" target="_blank">Play now</a>
+          <div class="Header-nav flex items-center"> 
+            <div class="Header-nav-close"> <img src="./assets/icons/icon-close.svg" alt=""></div><a class="Header-nav-link" href="#marketplace" target="">Marketplace</a><a class="Header-nav-link" href="#staking" target="">Staking</a><a class="Header-nav-link" href="#whitepaper" target="">Whitepaper</a><a class="Header-nav-link" href="https://demo.cryptomonter.com" target="_blank">Play now</a>
           </div>
         </div>
       </div>
     </header>
     <div class="PreviewCharacters">
-      <div class="PreviewCharacters-character"> <a class="PreviewCharacters-logo-play-now wow animate__flash" href="#"><img src="./assets/images/logo-play-now.png" alt=""></a>
+      <div class="Header-nav-open"> <img src="./assets/icons/icon-menu.svg" alt=""></div>
+      <div class="PreviewCharacters-character"> <a class="PreviewCharacters-logo-play-now wow animate__flash" href="https://demo.cryptomonter.com" target="_blank"><img src="./assets/images/logo-play-now.png" alt=""></a>
         <h3 class="PreviewCharacters-title">Characters </h3>
         <div class="PreviewCharacters-preview"> 
           <div class="owl-carousel" id="preview-character-carousel"></div>

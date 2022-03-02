@@ -1,7 +1,32 @@
 window.onload = () => {
+  nav.init()
   owlCarousel.init()
   // scrollMagic.init()
   // wowJs.init()
+}
+
+const nav = {
+  init: function() {
+    this.menuMobile()
+  },
+  menuMobile: function() {
+    const main = document.querySelector('.Header')
+    const overlay = main.querySelector('.Header-overlay')
+    const openBtn = document.querySelector('.Header-nav-open')
+    const closeBtn = main.querySelector('.Header-nav-close')
+
+    openBtn.addEventListener('click', () => {
+      main.classList.add('active')
+    })
+
+    closeBtn.addEventListener('click', () => {
+      main.classList.remove('active')
+    })
+
+    overlay.addEventListener('click', () => {
+      main.classList.remove('active')
+    })
+  },
 }
 
 const owlCarousel = {

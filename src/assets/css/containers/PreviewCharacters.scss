@@ -1,4 +1,22 @@
 .PreviewCharacters {
+  position: relative;
+
+  .Header-nav-open {
+    display: none;
+
+    @media (max-width: 991px) {
+      position: absolute;
+      right: 16px;
+      top: 32px;
+      width: 32px;
+      cursor: pointer;
+      display: block;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
   &-character {
     padding-top: 10rem;
     background: url('../images/bg-preview-characters.png');

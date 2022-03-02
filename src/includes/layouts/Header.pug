@@ -9,8 +9,11 @@
 header.Header
   .container 
     .Header-wrapper.flex.items-center.justify-between 
+      .Header-overlay
       .Header-logo 
         img(src="./assets/images/logo.png", alt="")
       .Header-nav.flex.items-center 
+        .Header-nav-close 
+          img(src="./assets/icons/icon-close.svg", alt="")
         each item in dataMenuLink
           a(href=`${item.link}` target=`${item.newTab ? '_blank' : ''}`).Header-nav-link= item.title
