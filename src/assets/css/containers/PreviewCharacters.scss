@@ -1,13 +1,24 @@
 .PreviewCharacters {
   &-character {
-    padding-top: 22rem;
+    padding-top: 10rem;
     background: url('../images/bg-preview-characters.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    min-height: 192rem;
 
     @media (max-width: 991px) {
       padding-top: 15rem;
+      min-height: auto;
+      height: 1173px;
+    }
+
+    @media (max-width: 768px) {
+      height: 980px;
+    }
+
+    @media (max-width: 575px) {
+      height: 943px;
     }
   }
 
@@ -20,24 +31,24 @@
     font-size: 4.8rem;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $black;
-    margin-bottom: 22rem;
+    margin: 20rem 0 18rem;
 
     @media (max-width: 991px) {
       display: none;
     }
   }
 
-  &-logo-mobile {
-    display: none;
+  &-logo-play-now {
+    display: block;
+    max-width: 81rem;
+    margin: 0 auto 10rem;
+
+    img {
+      width: 100%;
+    }
 
     @media (max-width: 991px) {
-      display: block;
       max-width: 364px;
-      margin: 0 auto 22rem;
-
-      img {
-        width: 100%;
-      }
     }
 
     @media (max-width: 768px) {
@@ -50,11 +61,18 @@
     max-width: 87rem;
     padding: 5rem 0;
     position: relative;
-    transform: translate(0rem, -11rem);
+    transform: translate(0rem, -5rem);
+
+    @media (max-width: 991px) {
+      transform: translate(0rem, 7rem);
+    }
+
+    @media (max-width: 768px) {
+      transform: translate(0rem, 5rem);
+    }
 
     @media (max-width: 575px) {
       max-width: 80rem;
-      transform: translate(0rem, -15rem);
     }
 
     &-image {
@@ -62,6 +80,27 @@
       max-width: 34rem;
       min-height: 380px;
       margin: auto;
+      position: relative;
+      padding: 6rem 0;
+
+      &-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        object-position: center;
+        animation: bgPreviewCharacter 2s linear infinite;
+
+        @keyframes bgPreviewCharacter {
+          0%, 100% {
+            transform: translate(-50%, -75%) scale(2);
+          }
+
+          50% {
+            transform: translate(-50%, -75%) scale(2.3);
+          }
+        }
+      }
 
       @media (max-width: 768px) {
         min-height: 335px;

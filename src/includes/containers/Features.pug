@@ -25,11 +25,11 @@
 section.section.Features
   .container 
     .Features-wrapper 
-      h3.section-title Features 
+      h3.section-title.wow.animate__bounceIn Features 
 
       .Features-main.flex.flex-wrap 
         each item in dataFeatures
-          .Features-main-item
+          .Features-main-item.wow.animate__bounceIn
             .Features-main-item-image 
               img(src=`${item.image}`, alt="")
             h4.Features-main-item-title= item.title

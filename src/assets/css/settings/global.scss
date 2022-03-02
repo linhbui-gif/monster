@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:  HKGrotesk-Regular;
+  font-family: HKGrotesk-Regular;
   scroll-behavior: smooth;
 }
 
@@ -111,11 +111,13 @@ section.section {
 }
 
 .background-page {
+  position: relative;
   background: url('../images/bg-desktop.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 696.6rem;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     background: url('../images/bg-mobile.png');
@@ -123,5 +125,25 @@ section.section {
     background-position: center;
     background-repeat: no-repeat;
     min-height: 69.3rem;
+  }
+}
+
+.land {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+
+  &.land1 {
+    left: -100px;
+    top: 484px;
+  }
+
+  &.land2 {
+    right: -100px;
+    top: 0;
   }
 }

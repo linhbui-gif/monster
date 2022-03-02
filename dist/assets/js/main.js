@@ -1,26 +1,7 @@
 window.onload = () => {
   owlCarousel.init()
-  // countUpConfig.init()
-  // lazyLoading.init()
-  // header.init()
-}
-
-const loading = {
-  init: function () {
-    this.configLoading()
-  },
-  configLoading: function () {
-    
-  }
-}
-
-const lazyLoading = {
-  init: function () {
-    this.config()
-  },
-  config: function () {
-    const lazyLoadInstance = new LazyLoad({});
-  }
+  // scrollMagic.init()
+  // wowJs.init()
 }
 
 const owlCarousel = {
@@ -28,7 +9,7 @@ const owlCarousel = {
     this.previewCharacterCarousel()
   },
   previewCharacterCarousel: async function () {
-    const response = await fetch('https://daonghia2404.github.io/crypto-monster/data.json');
+    const response = await fetch('../../data.json');
     const data = await response.json();
     let currentIndex = 0;
 
@@ -73,6 +54,7 @@ const owlCarousel = {
         contentPreviewCharacter += `
           <div class="item">
             <div class="PreviewCharacters-preview-image">
+              <img class="PreviewCharacters-preview-image-bg" src="./assets/images/bg-character.png" alt="" />
               <img src="${item.image}" alt="" />
             </div>
           </div>
@@ -193,68 +175,68 @@ const owlCarousel = {
   },
 }
 
-const header = {
+const scrollMagic = {
   init: function () {
-    // this.scrollHeaderEffect()
+    this.config()
   },
-  scrollHeaderEffect: function () {
-    const header = document.querySelector('.header-layout')
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 150) header.classList.add('active')
-      else header.classList.remove('active')
+  config: function () {
+    const tween = new TimelineLite()
+
+    const land1Bezier = {
+      curviness: 0,
+      autoRotate: false,
+      values: [
+        { x: 0, y: 0 },
+        { x: 100, y: 0 },
+      ],
+    }
+
+    const land2Bezier = {
+      curviness: 0,
+      autoRotate: false,
+      values: [
+        { x: 0, y: 0 },
+        { x: -100, y: 0 },
+      ],
+    }
+
+    tween.add(
+      [
+        TweenLite.to(".land.land1", 2, {
+          bezier: land1Bezier,
+          ease: Power1.easeInOut,
+        }),
+        TweenLite
+        .to(".land.land2", 2, {
+          bezier: land2Bezier,
+          ease: Power1.easeInOut,
+        }),
+      ]
+      
+    )
+
+    const controller = new ScrollMagic.Controller()
+
+    const scene = new ScrollMagic.Scene({
+      triggerElement: ".background-page",
+      duration: 1500,
+      triggerHook: 0.5,
     })
+
+    scene
+      .setTween(tween)
+      // .addIndicators()
+      .addTo(controller)
   },
 }
 
-const countUpConfig = {
-  init: function () {
-    // this.configCountUpWelcomeSection()
+const wowJs = {
+  init: function() {
+    this.config()
   },
-  configCountUpWelcomeSection: function () {
-    const dataCountWelcomeSection = [{
-        targetHTML: '#countUp-long-term',
-        numberCountUp: 92,
-        suffix: '%',
-      },
-      {
-        targetHTML: '#countUp-offices-internationally',
-        numberCountUp: 60
-      },
-      {
-        targetHTML: '#countUp-years-in-viet-nam ',
-        numberCountUp: 7
-      },
-    ]
-    this.setupScrollEvent('.section-welcome .about-wrapper', dataCountWelcomeSection)
-  },
-  setupScrollEvent: function (targetHTML, elementsCountUp) {
-    const target = document.querySelector(targetHTML)
-    if (target) {
-      const options = {
-        threshold: 1,
-        rootMargin: "0px",
-      };
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) {
-            return;
-          } else {
-            elementsCountUp.forEach((item) => this.setupCountUp(item.targetHTML, item.numberCountUp, item.suffix))
-            observer.unobserve(entry.target);
-          }
-        })
-      }, options);
-      observer.observe(target);
-    }
-  },
-  setupCountUp(targetId, number, suffix = '') {
-    const options = {
-      startVal: 0,
-      duration: 5,
-      suffix,
-    }
-    const target = document.querySelector(targetId)
-    const countUpObj = new CountUp(target, number, options)
-    countUpObj.start()
+  config: function() {
+    new WOW({
+      animateClass: 'animate__animated',
+    }).init();
   }
 }

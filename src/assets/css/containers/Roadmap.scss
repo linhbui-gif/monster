@@ -1,0 +1,15 @@
+.Roadmap {
+  &-main {
+    margin-top: 5rem;
+
+    &-image {
+      max-width: 116.6rem;
+      margin: 0 auto;
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @import url(./library/owl.carousel.min.css);
+@import url(./library/animate.min.css);
 @font-face {
   font-family: 'HKGrotesk-Light';
   src: url("../fonts/HKGrotesk-Light.otf") format("opentype"); }
@@ -1025,11 +1026,13 @@ section.section {
     margin: 4rem auto 0; }
 
 .background-page {
+  position: relative;
   background: url("../images/bg-desktop.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 696.6rem; }
+  min-height: 696.6rem;
+  overflow: hidden; }
   @media (max-width: 768px) {
     .background-page {
       background: url("../images/bg-mobile.png");
@@ -1037,6 +1040,20 @@ section.section {
       background-position: center;
       background-repeat: no-repeat;
       min-height: 69.3rem; } }
+
+.land {
+  position: absolute;
+  pointer-events: none;
+  z-index: -1; }
+  @media (max-width: 991px) {
+    .land {
+      display: none; } }
+  .land.land1 {
+    left: -100px;
+    top: 484px; }
+  .land.land2 {
+    right: -100px;
+    top: 0; }
 
 .Header {
   position: absolute;
@@ -1111,14 +1128,23 @@ section.section {
         width: 70%; }
 
 .PreviewCharacters-character {
-  padding-top: 22rem;
+  padding-top: 10rem;
   background: url("../images/bg-preview-characters.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  min-height: 192rem; }
   @media (max-width: 991px) {
     .PreviewCharacters-character {
-      padding-top: 15rem; } }
+      padding-top: 15rem;
+      min-height: auto;
+      height: 1173px; } }
+  @media (max-width: 768px) {
+    .PreviewCharacters-character {
+      height: 980px; } }
+  @media (max-width: 575px) {
+    .PreviewCharacters-character {
+      height: 943px; } }
 
 .PreviewCharacters-title {
   text-align: center;
@@ -1129,22 +1155,22 @@ section.section {
   font-size: 4.8rem;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #000;
-  margin-bottom: 22rem; }
+  margin: 20rem 0 18rem; }
   @media (max-width: 991px) {
     .PreviewCharacters-title {
       display: none; } }
 
-.PreviewCharacters-logo-mobile {
-  display: none; }
+.PreviewCharacters-logo-play-now {
+  display: block;
+  max-width: 81rem;
+  margin: 0 auto 10rem; }
+  .PreviewCharacters-logo-play-now img {
+    width: 100%; }
   @media (max-width: 991px) {
-    .PreviewCharacters-logo-mobile {
-      display: block;
-      max-width: 364px;
-      margin: 0 auto 22rem; }
-      .PreviewCharacters-logo-mobile img {
-        width: 100%; } }
+    .PreviewCharacters-logo-play-now {
+      max-width: 364px; } }
   @media (max-width: 768px) {
-    .PreviewCharacters-logo-mobile {
+    .PreviewCharacters-logo-play-now {
       max-width: 264px; } }
 
 .PreviewCharacters-preview {
@@ -1152,16 +1178,36 @@ section.section {
   max-width: 87rem;
   padding: 5rem 0;
   position: relative;
-  transform: translate(0rem, -11rem); }
+  transform: translate(0rem, -5rem); }
+  @media (max-width: 991px) {
+    .PreviewCharacters-preview {
+      transform: translate(0rem, 7rem); } }
+  @media (max-width: 768px) {
+    .PreviewCharacters-preview {
+      transform: translate(0rem, 5rem); } }
   @media (max-width: 575px) {
     .PreviewCharacters-preview {
-      max-width: 80rem;
-      transform: translate(0rem, -15rem); } }
+      max-width: 80rem; } }
   .PreviewCharacters-preview-image {
     width: 100%;
     max-width: 34rem;
     min-height: 380px;
-    margin: auto; }
+    margin: auto;
+    position: relative;
+    padding: 6rem 0; }
+    .PreviewCharacters-preview-image-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      object-position: center;
+      animation: bgPreviewCharacter 2s linear infinite; }
+
+@keyframes bgPreviewCharacter {
+  0%, 100% {
+    transform: translate(-50%, -75%) scale(2); }
+  50% {
+    transform: translate(-50%, -75%) scale(2.3); } }
     @media (max-width: 768px) {
       .PreviewCharacters-preview-image {
         min-height: 335px; } }
@@ -1524,6 +1570,15 @@ section.section {
     margin: 0 auto;
     text-align: center; }
     .Tokenomic-main-image img {
+      width: 100%; }
+
+.Roadmap-main {
+  margin-top: 5rem; }
+  .Roadmap-main-image {
+    max-width: 116.6rem;
+    margin: 0 auto;
+    text-align: center; }
+    .Roadmap-main-image img {
       width: 100%; }
 
 .Teams-main {
